@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "connection": "default",
+  "collectionName": "cursos",
+  "info": {
+    "name": "cursos"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "nome": {
+      "type": "string"
+    },
+    "descricao": {
+      "type": "text"
+    },
+    "preco": {
+      "type": "string"
+    },
+    "imagem": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": false
+    },
+    "horas": {
+      "type": "integer"
+    },
+    "prova": {
+      "model": "provas",
+      "via": "curso"
+    },
+    "categoria": {
+      "model": "categorias",
+      "via": "cursos"
+    },
+    "prist": {
+      "type": "decimal"
+    }
+  }
+}

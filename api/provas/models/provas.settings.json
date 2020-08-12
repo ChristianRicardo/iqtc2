@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "connection": "default",
+  "collectionName": "provas",
+  "info": {
+    "name": "provas"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "Questao1": {
+      "type": "string"
+    },
+    "curso": {
+      "via": "prova",
+      "model": "cursos"
+    }
+  }
+}
